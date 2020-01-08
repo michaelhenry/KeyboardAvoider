@@ -42,8 +42,8 @@ struct ContentView: View {
                 .padding(.horizontal, 16.0)
             }
         }
+        .edgesIgnoringSafeArea(.bottom)
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
