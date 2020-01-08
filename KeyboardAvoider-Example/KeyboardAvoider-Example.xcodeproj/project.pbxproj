@@ -13,12 +13,12 @@
 		A6BD94C723C5E176000142A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6BD94C623C5E176000142A5 /* Assets.xcassets */; };
 		A6BD94CA23C5E176000142A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6BD94C923C5E176000142A5 /* Preview Assets.xcassets */; };
 		A6BD94CD23C5E176000142A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6BD94CB23C5E176000142A5 /* LaunchScreen.storyboard */; };
-		A6BD94DA23C5E1BE000142A5 /* ScrollViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD94D623C5E1BE000142A5 /* ScrollViewX.swift */; };
-		A6BD94DB23C5E1BE000142A5 /* KeyboardAvoider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD94D723C5E1BE000142A5 /* KeyboardAvoider.swift */; };
-		A6BD94DC23C5E1BE000142A5 /* KeyboardAvoiderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD94D823C5E1BE000142A5 /* KeyboardAvoiderModifier.swift */; };
-		A6BD94DD23C5E1BE000142A5 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD94D923C5E1BE000142A5 /* KeyboardHandler.swift */; };
 		A6BD94E123C5E269000142A5 /* NormalTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD94E023C5E269000142A5 /* NormalTextField.swift */; };
 		A6BD94E323C5E2A7000142A5 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD94E223C5E2A7000142A5 /* PrimaryButton.swift */; };
+		A6BD94E823C5E574000142A5 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD94E423C5E574000142A5 /* KeyboardHandler.swift */; };
+		A6BD94E923C5E574000142A5 /* KeyboardAvoider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD94E523C5E574000142A5 /* KeyboardAvoider.swift */; };
+		A6BD94EA23C5E574000142A5 /* ScrollViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD94E623C5E574000142A5 /* ScrollViewX.swift */; };
+		A6BD94EB23C5E574000142A5 /* KeyboardAvoiderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD94E723C5E574000142A5 /* KeyboardAvoiderModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +30,12 @@
 		A6BD94C923C5E176000142A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A6BD94CC23C5E176000142A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6BD94CE23C5E176000142A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A6BD94D623C5E1BE000142A5 /* ScrollViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewX.swift; sourceTree = "<group>"; };
-		A6BD94D723C5E1BE000142A5 /* KeyboardAvoider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAvoider.swift; sourceTree = "<group>"; };
-		A6BD94D823C5E1BE000142A5 /* KeyboardAvoiderModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAvoiderModifier.swift; sourceTree = "<group>"; };
-		A6BD94D923C5E1BE000142A5 /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
 		A6BD94E023C5E269000142A5 /* NormalTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalTextField.swift; sourceTree = "<group>"; };
 		A6BD94E223C5E2A7000142A5 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		A6BD94E423C5E574000142A5 /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardHandler.swift; path = ../../Sources/KeyboardAvoider/KeyboardHandler.swift; sourceTree = "<group>"; };
+		A6BD94E523C5E574000142A5 /* KeyboardAvoider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardAvoider.swift; path = ../../Sources/KeyboardAvoider/KeyboardAvoider.swift; sourceTree = "<group>"; };
+		A6BD94E623C5E574000142A5 /* ScrollViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollViewX.swift; path = ../../Sources/KeyboardAvoider/ScrollViewX.swift; sourceTree = "<group>"; };
+		A6BD94E723C5E574000142A5 /* KeyboardAvoiderModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardAvoiderModifier.swift; path = ../../Sources/KeyboardAvoider/KeyboardAvoiderModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,10 +92,10 @@
 		A6BD94DE23C5E1C8000142A5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A6BD94D723C5E1BE000142A5 /* KeyboardAvoider.swift */,
-				A6BD94D823C5E1BE000142A5 /* KeyboardAvoiderModifier.swift */,
-				A6BD94D923C5E1BE000142A5 /* KeyboardHandler.swift */,
-				A6BD94D623C5E1BE000142A5 /* ScrollViewX.swift */,
+				A6BD94E523C5E574000142A5 /* KeyboardAvoider.swift */,
+				A6BD94E723C5E574000142A5 /* KeyboardAvoiderModifier.swift */,
+				A6BD94E423C5E574000142A5 /* KeyboardHandler.swift */,
+				A6BD94E623C5E574000142A5 /* ScrollViewX.swift */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -181,13 +181,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6BD94E323C5E2A7000142A5 /* PrimaryButton.swift in Sources */,
-				A6BD94DD23C5E1BE000142A5 /* KeyboardHandler.swift in Sources */,
-				A6BD94DB23C5E1BE000142A5 /* KeyboardAvoider.swift in Sources */,
 				A6BD94E123C5E269000142A5 /* NormalTextField.swift in Sources */,
 				A6BD94C123C5E174000142A5 /* AppDelegate.swift in Sources */,
+				A6BD94E823C5E574000142A5 /* KeyboardHandler.swift in Sources */,
 				A6BD94C323C5E174000142A5 /* SceneDelegate.swift in Sources */,
-				A6BD94DA23C5E1BE000142A5 /* ScrollViewX.swift in Sources */,
-				A6BD94DC23C5E1BE000142A5 /* KeyboardAvoiderModifier.swift in Sources */,
+				A6BD94E923C5E574000142A5 /* KeyboardAvoider.swift in Sources */,
+				A6BD94EA23C5E574000142A5 /* ScrollViewX.swift in Sources */,
+				A6BD94EB23C5E574000142A5 /* KeyboardAvoiderModifier.swift in Sources */,
 				A6BD94C523C5E174000142A5 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
