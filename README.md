@@ -1,3 +1,5 @@
+![Screenshot](images/screenshot.gif)
+
 # KeyboardAvoider
 
 A **KeyboardAvoider** for SwiftUI. Inspired by the simplicity of [keyboard_avoider](https://pub.dev/packages/keyboard_avoider) in [Flutter](https://flutter.dev/).
