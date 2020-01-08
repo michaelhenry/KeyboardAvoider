@@ -1,5 +1,10 @@
 ![Screenshot](images/screenshot.gif)
 
+[![Deployment status](https://github.com/michaelhenry/KeyboardAvoider/workflows/deploy_to_cocoapods/badge.svg)](https://github.com/michaelhenry/KeyboardAvoider/actions)
+[![Version](https://img.shields.io/cocoapods/v/KeyboardAvoider.svg?style=flat)](https://cocoapods.org/pods/KeyboardAvoider)
+[![License](https://img.shields.io/cocoapods/l/KeyboardAvoider.svg?style=flat)](https://cocoapods.org/pods/KeyboardAvoider)
+[![Platform](https://img.shields.io/cocoapods/p/KeyboardAvoider.svg?style=flat)](https://cocoapods.org/pods/KeyboardAvoider)
+
 # ⌨️ KeyboardAvoider {}
 
 A **KeyboardAvoider** for SwiftUI. Inspired by the simplicity of [keyboard_avoider](https://pub.dev/packages/keyboard_avoider) in [Flutter](https://flutter.dev/).
@@ -19,6 +24,14 @@ let package = Package(
     .package(url: "https://github.com/michaelhenry/KeyboardAvoider.git", from: "1.0.0")
   ]
 )
+```
+
+### Cocoapods
+
+```ruby
+target 'MyApp' do
+  pod 'KeyboardAvoider', '~> 1.0'
+end
 ```
 
 ## How to use
