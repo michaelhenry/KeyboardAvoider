@@ -17,7 +17,6 @@
 		A6BD94E323C5E2A7000142A5 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD94E223C5E2A7000142A5 /* PrimaryButton.swift */; };
 		A6BD94E823C5E574000142A5 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD94E423C5E574000142A5 /* KeyboardHandler.swift */; };
 		A6BD94E923C5E574000142A5 /* KeyboardAvoider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD94E523C5E574000142A5 /* KeyboardAvoider.swift */; };
-		A6BD94EA23C5E574000142A5 /* ScrollViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD94E623C5E574000142A5 /* ScrollViewX.swift */; };
 		A6BD94EB23C5E574000142A5 /* KeyboardAvoiderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD94E723C5E574000142A5 /* KeyboardAvoiderModifier.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +33,6 @@
 		A6BD94E223C5E2A7000142A5 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		A6BD94E423C5E574000142A5 /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardHandler.swift; path = ../../Sources/KeyboardAvoider/KeyboardHandler.swift; sourceTree = "<group>"; };
 		A6BD94E523C5E574000142A5 /* KeyboardAvoider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardAvoider.swift; path = ../../Sources/KeyboardAvoider/KeyboardAvoider.swift; sourceTree = "<group>"; };
-		A6BD94E623C5E574000142A5 /* ScrollViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollViewX.swift; path = ../../Sources/KeyboardAvoider/ScrollViewX.swift; sourceTree = "<group>"; };
 		A6BD94E723C5E574000142A5 /* KeyboardAvoiderModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardAvoiderModifier.swift; path = ../../Sources/KeyboardAvoider/KeyboardAvoiderModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,7 +93,6 @@
 				A6BD94E523C5E574000142A5 /* KeyboardAvoider.swift */,
 				A6BD94E723C5E574000142A5 /* KeyboardAvoiderModifier.swift */,
 				A6BD94E423C5E574000142A5 /* KeyboardHandler.swift */,
-				A6BD94E623C5E574000142A5 /* ScrollViewX.swift */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -186,7 +183,6 @@
 				A6BD94E823C5E574000142A5 /* KeyboardHandler.swift in Sources */,
 				A6BD94C323C5E174000142A5 /* SceneDelegate.swift in Sources */,
 				A6BD94E923C5E574000142A5 /* KeyboardAvoider.swift in Sources */,
-				A6BD94EA23C5E574000142A5 /* ScrollViewX.swift in Sources */,
 				A6BD94EB23C5E574000142A5 /* KeyboardAvoiderModifier.swift in Sources */,
 				A6BD94C523C5E174000142A5 /* ContentView.swift in Sources */,
 			);

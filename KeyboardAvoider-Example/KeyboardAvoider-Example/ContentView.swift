@@ -10,13 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var firstname:String = ""
-    @State var lastname:String = ""
-    @State var email:String = ""
-    @State var password:String = ""
-    @State var confirmPassword:String = ""
-    @State var phone:String = ""
-    
+    @State var text:String = ""
+
     var body: some View {
         KeyboardAvoider {
             ZStack {
@@ -24,19 +19,28 @@ struct ContentView: View {
                     Text("Sign up")
                         .font(.largeTitle)
                         .multilineTextAlignment(.leading)
-                    NormalTextField("First name", text: self.$firstname)
-                    NormalTextField("Last name", text: self.$lastname)
-                    NormalTextField("Email", text: self.$email)
-                    NormalTextField  ("Phone number", text: self.$phone)
-                    NormalTextField("Password", text: self.$password)
-                    NormalTextField  ("Confirm password", text: self.$confirmPassword)
                     
-                    PrimaryButton("Sign up") {
-                        
+                    Group {
+                        NormalTextField("First name", text: self.$text)
+                        NormalTextField("Last name", text: self.$text)
+                        NormalTextField("Email", text: self.$text)
+                        NormalTextField  ("Phone number", text: self.$text)
+                        NormalTextField("Password", text: self.$text)
+                        NormalTextField  ("Confirm password", text: self.$text)
+                        NormalTextField  ("Confirm password", text: self.$text)
+                        NormalTextField  ("Confirm password", text: self.$text)
+                        NormalTextField  ("Confirm password", text: self.$text)
+                        NormalTextField  ("Confirm password", text: self.$text)
                     }
-                    
-                    Button("Already have an account?") {
+                  
+                    Group {
+                        PrimaryButton("Sign up") {
+                            
+                        }
                         
+                        Button("Already have an account?") {
+                            
+                        }
                     }
                 }
                 .padding(.horizontal, 16.0)
