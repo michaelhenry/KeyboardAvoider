@@ -9,6 +9,11 @@
 
 A **KeyboardAvoider** for SwiftUI. Inspired by the simplicity of [keyboard_avoider](https://pub.dev/packages/keyboard_avoider) in [Flutter](https://flutter.dev/).
 
+## Features
+- Autoscroll to TextField
+- Swipe keyboard to dismiss
+
+
 ## Installation
 
 ### [Swift Package Manager](https://github.com/apple/swift-package-manager)
