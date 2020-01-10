@@ -22,14 +22,17 @@ class KeyboardHandler:NSObject, ObservableObject, UIGestureRecognizerDelegate {
     
     override init() {
         super.init()
-        panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan(_:)))
+        panRecognizer = UIPanGestureRecognizer(
+            target: self, action: #selector(handlePan(_:)))
         panRecognizer?.delegate = self
-        UIApplication.shared.windows.first?.addGestureRecognizer(panRecognizer!)
+        UIApplication.shared.windows.first?
+            .addGestureRecognizer(panRecognizer!)
         
         let keyboardWillShow = NotificationCenter
             .default
             .publisher(for: UIResponder.keyboardWillShowNotification)
-            .compactMap({ $0.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect })
+            .compactMap({ $0.userInfo?[UIResponder.keyboardFrameEndUserInfoKey]
+                as? CGRect })
             .map { Double($0.height) }
             .eraseToAnyPublisher()
         
@@ -47,7 +50,8 @@ class KeyboardHandler:NSObject, ObservableObject, UIGestureRecognizerDelegate {
         .store(in: &subscriptions)
     }
     
-    @objc func handlePan(_ gestureRecognizer:UIPanGestureRecognizer) {
+    @objc func handlePan(
+        _ gestureRecognizer:UIPanGestureRecognizer) {
         guard case .changed = gestureRecognizer.state,
             let window = UIApplication.shared.windows.first,
             let actualKbHeight = actualKeyboardHeight
@@ -62,7 +66,6 @@ class KeyboardHandler:NSObject, ObservableObject, UIGestureRecognizerDelegate {
         keyboardHeight =  screenHeight - originY
     }
     
-    
     public func gestureRecognizer(
         _ gestureRecognizer: UIGestureRecognizer,
         shouldReceive touch: UITouch
@@ -70,8 +73,8 @@ class KeyboardHandler:NSObject, ObservableObject, UIGestureRecognizerDelegate {
         let point = touch.location(in: gestureRecognizer.view)
         var view = gestureRecognizer.view?.hitTest(point, with: nil)
         while let candidate = view {
-            if let scrollView = candidate as? UIScrollView,
-                case .interactive = scrollView.keyboardDismissMode {
+            if let scrollView = candidate as? UIScrollView {
+                scrollView.keyboardDismissMode = .interactive
                 return true
             }
             view = candidate.superview
@@ -81,7 +84,8 @@ class KeyboardHandler:NSObject, ObservableObject, UIGestureRecognizerDelegate {
     
     public func gestureRecognizer(
         _ gestureRecognizer: UIGestureRecognizer,
-        shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer
+        shouldRecognizeSimultaneouslyWith
+        otherGestureRecognizer: UIGestureRecognizer
     ) -> Bool {
         return gestureRecognizer === self.panRecognizer
     }

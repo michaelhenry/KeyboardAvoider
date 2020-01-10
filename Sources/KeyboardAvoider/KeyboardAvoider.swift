@@ -18,14 +18,14 @@ public struct KeyboardAvoider<Content:View>: View {
     }
     
     public var body: some View {
-        GeometryReader { geometry in
-            ScrollViewX {
-                self.content
-                    .frame(width: geometry.size.width, height: geometry.size.height)
-            }
-            .avoidKeyboard()
+        
+        ScrollView {
+            self.content
         }
+        .avoidKeyboard()
     }
 }
 
 #endif
+
+
