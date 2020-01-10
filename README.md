@@ -1,4 +1,4 @@
-![Screenshot](images/screenshot.gif)
+![Screenshot](images/screenshot.gif) ![Screenshot](images/screenshot2.gif)
 
 [![Deployment status](https://github.com/michaelhenry/KeyboardAvoider/workflows/deploy_to_cocoapods/badge.svg)](https://github.com/michaelhenry/KeyboardAvoider/actions)
 [![Version](https://img.shields.io/cocoapods/v/KeyboardAvoider.svg?style=flat)](https://cocoapods.org/pods/KeyboardAvoider)
@@ -72,10 +72,10 @@ KeyboardAvoider {
 
 ## FAQ
 - How to remove the extra space between the textfield and the keyboard
-  
+
   > You can remove it by ignoring the `safe area layout - bottom`. Please see the [Sample Project](https://github.com/michaelhenry/KeyboardAvoider/blob/d5293c541673bce47f00cdd0ec2f1b604b5341c8/KeyboardAvoider-Example/KeyboardAvoider-Example/ContentView.swift#L45)
- 
+
  ```swift
   .edgesIgnoringSafeArea(.bottom)
   ```
-  
+
