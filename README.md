@@ -92,7 +92,7 @@ Or in case you don't want to make your view scrollable, you can just only apply 
 ## FAQ
 - How to remove the extra space between the textfield and the keyboard
 
-  > You can remove it by ignoring the `safe area layout - bottom`. Please see the [Sample Project](https://github.com/michaelhenry/KeyboardAvoider/blob/d5293c541673bce47f00cdd0ec2f1b604b5341c8/KeyboardAvoider-Example/KeyboardAvoider-Example/ContentView.swift#L45)
+  > You can remove it by ignoring the `safe area - bottom`. Please see the [Sample Project](https://github.com/michaelhenry/KeyboardAvoider/blob/d5293c541673bce47f00cdd0ec2f1b604b5341c8/KeyboardAvoider-Example/KeyboardAvoider-Example/ContentView.swift#L45)
 
  ```swift
   .edgesIgnoringSafeArea(.bottom)
