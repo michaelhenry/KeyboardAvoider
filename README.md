@@ -70,6 +70,25 @@ KeyboardAvoider {
 }
 ```
 
+Or in case you don't want to make your view scrollable, you can just only apply the `.avoidKeyboard()` into your main view.
+
+```swift
+    VStack {
+        TextField("First name", text: self.$firstname)
+        TextField("Last name", text: self.$lastname)
+        TextField("Email", text: self.$email)
+        TextField("Password", text: self.$password)
+        TextField("Confirm password", text: self.$password)
+        Button("Sign Up") {
+
+        }
+        Button("Already have an account?") {
+
+        }
+    }
+    .avoidKeyboard()
+```
+
 ## FAQ
 - How to remove the extra space between the textfield and the keyboard
 
