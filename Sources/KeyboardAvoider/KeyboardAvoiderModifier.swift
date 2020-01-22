@@ -19,7 +19,10 @@ public struct KeyboardAvoiderModifier: ViewModifier {
     public func body(content: Content) -> some View {
         content
             .padding(.bottom, keyboardHeight)
-            .onReceive(keyboardHandler.$keyboardHeight, perform: { self.keyboardHeight = CGFloat($0) })
+            .onReceive(
+                keyboardHandler.$keyboardHeight,
+                perform: { self.keyboardHeight = CGFloat($0)
+            })
     }
 }
 
