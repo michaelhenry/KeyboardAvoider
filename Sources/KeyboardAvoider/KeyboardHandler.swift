@@ -14,6 +14,9 @@ import UIKit
 class KeyboardHandler:NSObject, ObservableObject, UIGestureRecognizerDelegate {
     
     @Published var keyboardHeight:Double = 0
+  
+    /// Space between keyboard and TextField or TextView
+    var spaceBetweenKeyboardAndInputField = 20.0
     
     var actualKeyboardHeight:Double?
     
@@ -46,6 +49,12 @@ class KeyboardHandler:NSObject, ObservableObject, UIGestureRecognizerDelegate {
             .sink {[weak self] height in
                 self?.keyboardHeight = height
                 self?.actualKeyboardHeight = height
+        }
+        .store(in: &subscriptions)
+        
+        keyboardWillShow
+            .sink {[weak self] _ in
+                self?.adjustScrollViewOffsetYIfPossible()
         }
         .store(in: &subscriptions)
     }
@@ -88,6 +97,45 @@ class KeyboardHandler:NSObject, ObservableObject, UIGestureRecognizerDelegate {
         otherGestureRecognizer: UIGestureRecognizer
     ) -> Bool {
         return gestureRecognizer === self.panRecognizer
+    }
+    
+    private func adjustScrollViewOffsetYIfPossible() {
+        
+        var activeView:UIView?
+        if let activeTextField = UIResponder.current() as? UITextField {
+            activeView = activeTextField
+        } else if let activeTextView = UIResponder.current() as? UITextView {
+            activeView = activeTextView
+        }
+        
+        guard let _activeView = activeView else { return }
+        
+        // lookup for the parent scroll view
+        var superview = _activeView.superview
+        var scrollview:UIScrollView?
+        while superview != nil {
+            if let _sv = superview as? UIScrollView {
+                scrollview = _sv
+                break
+            }
+            superview = superview?.superview
+        }
+        
+        guard let _scrollview = scrollview else { return }
+        
+        let targetFrame = _activeView.convert(_activeView.bounds, to: nil)
+        let targetY = Double(targetFrame.maxY)
+        let containerY = Double(UIScreen.main.bounds.height) - keyboardHeight
+        if containerY < targetY {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                _scrollview.setContentOffset(
+                    CGPoint(
+                        x: 0,
+                        y: _scrollview.contentOffset.y
+                            + CGFloat(self.spaceBetweenKeyboardAndInputField)),
+                    animated: true)
+            }
+        }
     }
 }
 
