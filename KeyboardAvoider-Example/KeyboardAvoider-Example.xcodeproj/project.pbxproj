@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A68A237E23D8828200BA1A4C /* UIResponder_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68A237D23D8828100BA1A4C /* UIResponder_Extension.swift */; };
 		A6BD94C123C5E174000142A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD94C023C5E174000142A5 /* AppDelegate.swift */; };
 		A6BD94C323C5E174000142A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD94C223C5E174000142A5 /* SceneDelegate.swift */; };
 		A6BD94C523C5E174000142A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD94C423C5E174000142A5 /* ContentView.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A68A237D23D8828100BA1A4C /* UIResponder_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponder_Extension.swift; sourceTree = "<group>"; };
 		A6BD94BD23C5E174000142A5 /* KeyboardAvoider-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KeyboardAvoider-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6BD94C023C5E174000142A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6BD94C223C5E174000142A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				A6BD94E523C5E574000142A5 /* KeyboardAvoider.swift */,
 				A6BD94E723C5E574000142A5 /* KeyboardAvoiderModifier.swift */,
 				A6BD94E423C5E574000142A5 /* KeyboardHandler.swift */,
+				A68A237D23D8828100BA1A4C /* UIResponder_Extension.swift */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				A6BD94C123C5E174000142A5 /* AppDelegate.swift in Sources */,
 				A6BD94E823C5E574000142A5 /* KeyboardHandler.swift in Sources */,
 				A6BD94C323C5E174000142A5 /* SceneDelegate.swift in Sources */,
+				A68A237E23D8828200BA1A4C /* UIResponder_Extension.swift in Sources */,
 				A6BD94E923C5E574000142A5 /* KeyboardAvoider.swift in Sources */,
 				A6BD94EB23C5E574000142A5 /* KeyboardAvoiderModifier.swift in Sources */,
 				A6BD94C523C5E174000142A5 /* ContentView.swift in Sources */,
