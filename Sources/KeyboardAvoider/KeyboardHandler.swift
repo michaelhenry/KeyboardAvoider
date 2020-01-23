@@ -127,7 +127,7 @@ class KeyboardHandler:NSObject, ObservableObject, UIGestureRecognizerDelegate {
         let targetY = Double(targetFrame.maxY)
         let containerY = Double(UIScreen.main.bounds.height) - keyboardHeight
         if containerY < targetY {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 _scrollview.setContentOffset(
                     CGPoint(
                         x: 0,
