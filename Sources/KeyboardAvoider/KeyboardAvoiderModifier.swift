@@ -12,17 +12,11 @@ import Combine
 
 public struct KeyboardAvoiderModifier: ViewModifier {
     
-    @State private var keyboardHeight: CGFloat = 0
-    
     @ObservedObject var keyboardHandler = KeyboardHandler()
     
     public func body(content: Content) -> some View {
         content
-            .padding(.bottom, keyboardHeight)
-            .onReceive(
-                keyboardHandler.$keyboardHeight,
-                perform: { self.keyboardHeight = CGFloat($0)
-            })
+            .padding(.bottom, keyboardHandler.keyboardHeight)
     }
 }
 

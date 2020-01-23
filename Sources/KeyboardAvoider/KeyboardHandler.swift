@@ -13,12 +13,12 @@ import UIKit
 
 class KeyboardHandler:NSObject, ObservableObject, UIGestureRecognizerDelegate {
     
-    @Published public var keyboardHeight:Double = 0
+    @Published public var keyboardHeight:CGFloat = 0.0
   
     /// Space between keyboard and TextField or TextView
-    var spaceBetweenKeyboardAndInputField = 20.0
+    var spaceBetweenKeyboardAndInputField:CGFloat = 20.0
     
-    var actualKeyboardHeight:Double?
+    var actualKeyboardHeight:CGFloat?
     
     var panRecognizer:UIPanGestureRecognizer?
     var subscriptions = Set<AnyCancellable>()
@@ -36,13 +36,14 @@ class KeyboardHandler:NSObject, ObservableObject, UIGestureRecognizerDelegate {
             .publisher(for: UIResponder.keyboardWillShowNotification)
             .compactMap({ $0.userInfo?[UIResponder.keyboardFrameEndUserInfoKey]
                 as? CGRect })
-            .map { Double($0.height) }
+            .map { $0.height }
             .eraseToAnyPublisher()
         
         let keyboardWillHide = NotificationCenter
             .default
             .publisher(for: UIResponder.keyboardWillHideNotification)
-            .map({ _ in 0.0 })
+            .map({ _ in CGFloat(0.0) })
+            .eraseToAnyPublisher()
             .eraseToAnyPublisher()
         
         keyboardWillShow.merge(with: keyboardWillHide)
@@ -67,8 +68,8 @@ class KeyboardHandler:NSObject, ObservableObject, UIGestureRecognizerDelegate {
             else {
                 return
         }
-        let originY = Double(gestureRecognizer.location(in: window).y)
-        let screenHeight = Double(UIScreen.main.bounds.height)
+        let originY = gestureRecognizer.location(in: window).y
+        let screenHeight = UIScreen.main.bounds.height
         guard originY >= screenHeight - actualKbHeight else {
             return
         }
@@ -124,8 +125,8 @@ class KeyboardHandler:NSObject, ObservableObject, UIGestureRecognizerDelegate {
         guard let _scrollview = scrollview else { return }
         
         let targetFrame = _activeView.convert(_activeView.bounds, to: nil)
-        let targetY = Double(targetFrame.maxY)
-        let containerY = Double(UIScreen.main.bounds.height) - keyboardHeight
+        let targetY = targetFrame.maxY
+        let containerY = UIScreen.main.bounds.height - keyboardHeight
         if containerY < targetY {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 _scrollview.setContentOffset(
