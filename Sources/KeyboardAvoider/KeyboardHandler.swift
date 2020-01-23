@@ -44,7 +44,6 @@ class KeyboardHandler:NSObject, ObservableObject, UIGestureRecognizerDelegate {
             .publisher(for: UIResponder.keyboardWillHideNotification)
             .map({ _ in CGFloat(0.0) })
             .eraseToAnyPublisher()
-            .eraseToAnyPublisher()
         
         keyboardWillShow.merge(with: keyboardWillHide)
             .sink {[weak self] height in
