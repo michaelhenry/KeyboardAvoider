@@ -13,7 +13,7 @@ import UIKit
 
 class KeyboardHandler:NSObject, ObservableObject, UIGestureRecognizerDelegate {
     
-    @Published var keyboardHeight:Double = 0
+    @Published public var keyboardHeight:Double = 0
   
     /// Space between keyboard and TextField or TextView
     var spaceBetweenKeyboardAndInputField = 20.0
