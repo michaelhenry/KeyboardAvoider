@@ -52,7 +52,11 @@ class KeyboardHandler:NSObject, ObservableObject, UIGestureRecognizerDelegate {
         }
         .store(in: &subscriptions)
         
-        keyboardWillShow
+        let keyboardDidShow = NotificationCenter
+            .default
+            .publisher(for: UIResponder.keyboardDidShowNotification)
+        
+        keyboardDidShow
             .sink {[weak self] _ in
                 self?.adjustScrollViewOffsetYIfPossible()
         }
@@ -126,14 +130,12 @@ class KeyboardHandler:NSObject, ObservableObject, UIGestureRecognizerDelegate {
         let targetFrame = _activeView.convert(_activeView.bounds, to: nil)
         let targetY = targetFrame.maxY
         let containerY = UIScreen.main.bounds.height - keyboardHeight
+        
         if containerY < targetY {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                _scrollview.setContentOffset(
-                    CGPoint(
-                        x: 0,
-                        y: _scrollview.contentOffset.y
-                            + CGFloat(self.spaceBetweenKeyboardAndInputField)),
-                    animated: true)
+            DispatchQueue.main.async {
+                var newFrame = targetFrame
+                newFrame.origin.y -= self.spaceBetweenKeyboardAndInputField
+                _scrollview.scrollRectToVisible(newFrame, animated: true)
             }
         }
     }
